@@ -1,0 +1,50 @@
+public class GradeAve {
+	//Write a program that will provide important statistics for the grades in a class.
+	import java.util.Scanner;
+	import java.util.ArrayList;
+	import java.util.Collections;
+
+
+	public class GradeAve   {
+	    public static void main(String[] args) {
+
+	        ArrayList<Double> grades;
+	        double avgGrade;
+	        double maxGrade;
+	        double minGrade;
+	        int i;
+	        double sum;
+	        try (var scnr = new Scanner(System.in)) {
+	            grades = new ArrayList<>();
+
+	            avgGrade = 0;
+	            maxGrade = 0;
+	            minGrade = 0;
+	            i = 0;
+	            sum = i;
+
+	            System.out.println("Enter value grade: ");
+	            while (scnr.hasNextDouble()) {
+	                grades.add(scnr.nextDouble());
+	            }
+	            scnr.close();
+	        }
+	        System.out.println(grades);
+
+	        //Calculating average here
+	        double Grade;
+	        for (i = 0; i < grades.size(); i++) {
+	            sum = sum + grades.get(i);
+	            avgGrade = (sum / 10);
+	            maxGrade = Collections.max(grades);
+	            minGrade = Collections.min(grades);
+	        }
+	        System.out.println(grades);
+	        System.out.println("Maximum grade: " + maxGrade);
+	        System.out.println("Minimum grade: " + minGrade);
+	        System.out.println("Average grade: " + avgGrade);
+
+	    }
+	 }
+}
+
